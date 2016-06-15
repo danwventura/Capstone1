@@ -1,5 +1,19 @@
-$testColor: royalblue;
+$testColor: orange;
+
+html{
+  font-size: 40px;
+}
+
 
 body{
   background-color: $testColor;
+}
+
+ul li {
+  display: inline-block;
+}
+
+nav li a{
+  font-size: 1px;
+  text-decoration: none;
 }

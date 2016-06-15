@@ -1,2 +1,12 @@
+html {
+  font-size: 40px; }
+
 body {
-  background-color: royalblue; }
+  background-color: orange; }
+
+ul li {
+  display: inline-block; }
+
+nav li a {
+  font-size: 1px;
+  text-decoration: none; }

@@ -1,4 +1,4 @@
-var app = angular.module("iCaddy", ["ngRoute"])
+var app = angular.module("iCaddy", ['ngRoute'])
 
 // constant for firebase here
 //constant for weather api here
