@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- ***************Materialize CDN ************************-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <!-- ******************CSS Link ******************************** -->
+  <link rel="stylesheet" type="text/css" href="/styles/main.css">
+  <title>iCaddy</title>
+</head>
+<body ng-app="iCaddy">
+  <div ng-include="'./partials/nav.html'">
+    
+  </div>
+
+
+  <div ng-view>
+    
+    
+  </div>
+
+
+
+
+
+
+
+  <!-- ***************Dependencies*************** -->
+  <script type="text/javascript" src="./lib/node_modules/jquery/dist/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  <script type="text/javascript" src="./lib/node_modules/angular/angular.js"></script>
+  <script type="text/javascript" src="./lib/node_modules/angular-route/angular-route.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.js"></script>  
+  <script type="text/javascript" src="./app/app.js"></script>
+  <script type="text/javascript" src="./app/factories/AuthFactory.js"></script>
+  <script type="text/javascript" src="./app/factories/WeatherFactory.js"></script>
+  <script type="text/javascript" src="./app/factories/ScorecardFactory.js"></script>
+  <script type="text/javascript" src="./app/factories/StatFactory.js"></script>
+  <script type="text/javascript" src="./app/controllers/LoginCtrl.js"></script>
+  <script type="text/javascript" src="./app/controllers/WeatherCtrl.js"></script>
+  <script type="text/javascript" src="./app/controllers/NavCtrl.js"></script>
+  <script type="text/javascript" src="./app/controllers/MainViewCtrl.js"></script>
+  <script type="text/javascript" src="./app/controllers/NewCardCtrl.js"></script>
+  <script type="text/javascript" src="./app/controllers/EditCardCtrl.js"></script>
+  <script type="text/javascript" src="./app/controllers/AllCardsCtrl.js"></script>
+  <script type="text/javascript" src="./app/controllers/StatsCtrl.js"></script>
+  
+
+
+</body>
+</html>
