@@ -3,6 +3,7 @@ var app = angular.module("iCaddy", ['ngRoute'])
 // constant for firebase here
 .constant("firebaseURL", "https://icaddy.firebaseio.com/")
 //constant for weather api here
+.constant("weatherURL", "http://api.wunderground.com/api/24681701abdac30f/hourly/q/")
 
 let isAuth = (AuthFactory) => new Promise ((resolve, reject) => {
   if (AuthFactory.isAuthenticated ()){
@@ -18,6 +19,11 @@ app.config(function($routeProvider){
   when('/',{
   templateUrl: 'partials/main.html',
   controller: 'MainViewCtrl',
+  resolve: {isAuth}
+  }).
+  when('/weather/zip',{
+  templateUrl: 'partials/userZip.html',
+  controller: 'WeatherCtrl',
   resolve: {isAuth}
   }).
   when('/weather',{
@@ -48,7 +54,7 @@ app.config(function($routeProvider){
   templateUrl: 'partials/login.html',
   controller: 'LoginCtrl'
   }).
-  otherwise('/');
+  otherwise('/login');
   });
 
 
@@ -58,6 +64,9 @@ app.run(($location) => {
     icaddyRef.onAuth(authData => {
       if(!authData){
         $location.path("/login")
+
+
+
       }
     })
   })
