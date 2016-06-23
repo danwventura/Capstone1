@@ -3,7 +3,7 @@ var app = angular.module("iCaddy", ['ngRoute'])
 // constant for firebase here
 .constant("firebaseURL", "https://icaddy.firebaseio.com/")
 //constant for weather api here
-.constant("weatherURL", "http://api.wunderground.com/api/24681701abdac30f/hourly/q/")
+.constant("weatherURL", "http://api.wunderground.com/api//hourly/q/")
 
 let isAuth = (AuthFactory) => new Promise ((resolve, reject) => {
   if (AuthFactory.isAuthenticated ()){
