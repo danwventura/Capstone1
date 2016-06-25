@@ -9,13 +9,7 @@ body{
   background-color: $testColor;
 }
 
-.nav {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-
+//################## NAV #######################//
 .temp li {
   display: inline;
 
@@ -29,10 +23,30 @@ body{
 
 }
 
+//#############################################//
+
+
+//################## SCORECARD #################//
+
+.newRoundData {
+  text-align:center;
+  width: 30%;
+  margin-right: auto;
+  margin-left: auto;
+  
+}
+
+.newRoundData label {
+  font-size: 15px;
+
+}
+
+
+
 
 .collapsible {
  text-align:center;
- width:20%;
+ width:40%;
  margin-left: auto;
  margin-right: auto;
 
@@ -45,3 +59,10 @@ body{
 .collapsible-body {
   font-size: 13px;
 }
+
+.newCardBtn{
+  text-align:center;
+}
+
+
+//###############################################//

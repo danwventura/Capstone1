@@ -32,7 +32,7 @@ app.config(function($routeProvider){
   resolve: {isAuth}
   }).
   when('/scorecards/new',{
-  templateUrl: 'partials/newround.html',
+  templateUrl: 'partials/newRound.html',
   controller: 'NewCardCtrl',
   resolve: {isAuth}
   }).
@@ -69,8 +69,3 @@ app.run(($location) => {
   })
 
 
-$(document).ready(function(){
-    $('.collapsible').collapsible({
-      accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
-    });
-  });
