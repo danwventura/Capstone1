@@ -1,5 +1,5 @@
-app.controller("NewCardCtrl", function(){
+app.controller("NewCardCtrl", function($scope, $location, ScorecardFactory){
 
 
-  console.log("NewCardCtrl")
+  
 })

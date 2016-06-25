@@ -1,4 +1,4 @@
-var app = angular.module("iCaddy", ['ngRoute'])
+var app = angular.module("iCaddy", ['ngRoute', 'ui.materialize'])
 
 // constant for firebase here
 .constant("firebaseURL", "https://icaddy.firebaseio.com/")
@@ -64,9 +64,13 @@ app.run(($location) => {
     icaddyRef.onAuth(authData => {
       if(!authData){
         $location.path("/login")
-
-
-
       }
     })
   })
+
+
+$(document).ready(function(){
+    $('.collapsible').collapsible({
+      accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+    });
+  });

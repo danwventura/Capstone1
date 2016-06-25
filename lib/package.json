@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "angular": "^1.5.7",
+    "angular-materialize": "^0.1.9",
     "angular-route": "^1.5.6",
     "angularfire": "^1.2.0",
     "firebase": "^2.4.2",
@@ -19,6 +21,7 @@
     "jquery": "^3.0.0",
     "jshint": "^2.9.2",
     "jshint-stylish": "^2.2.0",
+    "materialize-css": "^0.97.6",
     "sass": "^0.5.0",
     "watchify": "^3.7.0"
   }
