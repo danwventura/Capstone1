@@ -1,8 +1,8 @@
 html {
-  font-size: 10px; }
+  font-size: 25px; }
 
 body {
-  background-color: mediumspringgreen; }
+  background: mediumspringgreen; }
 
 .temp li {
   display: inline; }
@@ -15,16 +15,16 @@ body {
 
 .newRoundData {
   text-align: center;
-  width: 30%;
+  width: 70%;
   margin-right: auto;
   margin-left: auto; }
 
 .newRoundData label {
-  font-size: 15px; }
+  font-size: 20px; }
 
 .collapsible {
   text-align: center;
-  width: 40%;
+  width: 70%;
   margin-left: auto;
   margin-right: auto; }
 
