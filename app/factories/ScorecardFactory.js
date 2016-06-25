@@ -7,7 +7,7 @@ app.factory("ScorecardFactory", function($q, $http, firebaseURL, AuthFactory) {
     let user = AuthFactory.getUser();
     console.log("getcardsuser", user);
     return $q(function(resolve, reject){
-    $http.get(`${firebaseURL}scorecard.json`)
+    $http.get(`${firebaseURL}scorecards.json`)
     .success(function(scorecardObject){
       let scorecardCollection = scorecardObject
       console.log("scorecardCollection", scorecardCollection);
@@ -17,7 +17,7 @@ app.factory("ScorecardFactory", function($q, $http, firebaseURL, AuthFactory) {
     })
   }
 
-  
+
 
   var postNewScorecard = function(newCard){
     let user = AuthFactory.getUser();
@@ -118,5 +118,5 @@ app.factory("ScorecardFactory", function($q, $http, firebaseURL, AuthFactory) {
 
 
 
-  return {postNewScorecard:postNewScorecard}
+  return {postNewScorecard:postNewScorecard, getScorecardsFromFirebase:getScorecardsFromFirebase}
 });
