@@ -5,17 +5,23 @@ app.factory("ScorecardFactory", function($q, $http, firebaseURL, AuthFactory) {
   var getScorecardsFromFirebase = function(){
     var scorecards = [];
     let user = AuthFactory.getUser();
-    console.log("getcardsuser", user);
+    console.log("user", user);
     return $q(function(resolve, reject){
-    $http.get(`${firebaseURL}scorecards.json?orderBy="uid"&equalTo="${user.uid}`)
-    .success(function(scorecardObject){
-      let scorecardCollection = scorecardObject
-      console.log("scorecardCollection", scorecardCollection);
-      scorecards.push(scorecardCollection)
-      resolve(scorecardCollection)
+    $http.get(`${firebaseURL}scorecards.json`)
+      .success(function(scorecardObject){
+        var scorecardCollection = scorecardObject;
+        Object.keys(scorecardCollection).forEach(function(key){
+        scorecardCollection[key].id=key
+        console.log("key", key);
+        scorecards.push(scorecardCollection[key])
+      });
+      resolve(scorecards);
     })
-    })
-  }
+    .error(function(error){
+      reject(error);
+      });
+    });
+  };
 
 
 
