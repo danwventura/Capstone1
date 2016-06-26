@@ -7,7 +7,7 @@ app.factory("ScorecardFactory", function($q, $http, firebaseURL, AuthFactory) {
     let user = AuthFactory.getUser();
     console.log("getcardsuser", user);
     return $q(function(resolve, reject){
-    $http.get(`${firebaseURL}scorecards.json`)
+    $http.get(`${firebaseURL}scorecards.json?orderBy="uid"&equalTo="${user.uid}`)
     .success(function(scorecardObject){
       let scorecardCollection = scorecardObject
       console.log("scorecardCollection", scorecardCollection);
@@ -103,8 +103,8 @@ app.factory("ScorecardFactory", function($q, $http, firebaseURL, AuthFactory) {
           holeEighteenScore:newCard.holeEighteenScore,
           holeEighteenFairway:newCard.holeEighteenFairway,
           holeEighteenPutts:newCard.holeEighteenPutts,
-          holeEighteenNotes:newCard.holeEighteenNotes
-          // uid:user.uid
+          holeEighteenNotes:newCard.holeEighteenNotes,
+          uid:user.uid
         })
       )
       .success(
