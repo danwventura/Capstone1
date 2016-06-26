@@ -42,7 +42,7 @@ app.factory("AuthFactory", function(firebaseURL) {
      */
     storeUser (authData) {
       let stringifiedUser = JSON.stringify({ uid: authData.uid });
-
+      console.log("stringifieduser", stringifiedUser);
       return new Promise((resolve, reject) => {
         $http
           .post(`${firebaseURL}/users.json`, stringifiedUser)

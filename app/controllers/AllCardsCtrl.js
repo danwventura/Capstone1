@@ -3,9 +3,11 @@ app.controller("AllCardsCtrl", function($scope, $http, $location, ScorecardFacto
   $scope.title = "Scorebook";
   $scope.allScorecards = [];
 
+  
   ScorecardFactory.getScorecardsFromFirebase().then(function(scorecardCollection){
-    console.log("scorecardCollectionFromPromise", scorecardCollection);
     $scope.allScorecards = scorecardCollection;
+    console.log("allCards", scorecardCollection);
+    // console.log("allCards", $scope.allScorecards);
   })
   
 })

@@ -6,7 +6,7 @@ app.controller("LoginCtrl", function($scope, $location, firebaseURL, AuthFactory
   // $scope.hasUser = false;
   $scope.account = {
     email: "",
-    password: "",
+    password: ""
   };
 
 
