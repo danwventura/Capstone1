@@ -1,8 +1,7 @@
- <!-- <div ng-repeat="scorecard in allScorecards"> -->
-    <!-- <ul class="collapsible" data-collapsible="accordion" watch> -->
+
       <div class="newRoundData">
         
-        <h5>{{selectedCard.roundCourse}} {{selectedCard.roundDate}}</h5>
+        <h5>{{selectedCard.roundCourse}} {{selectedCard.roundDate}} </h5>
     
         <div><h5>Round Score:  {{selectedCard.roundScore}}</h5></div>      
         <div><h6>Course Rating:  <strong>{{selectedCard.courseRating}}</strong></h6></div>
@@ -10,297 +9,172 @@
         <div><h6>Round Date:  <strong>{{selectedCard.roundDate}}</strong></h6></div>
       </div>
 
-      <!-- <li>
-        <div class="collapsible-header"><i class="material-icons"></i>Hole One</div>
-        <div class="collapsible-body">Score:{{selectedCard.holeOneScore}}</div>
-        <div class="collapsible-body">Fairway: {{selectedCard.holeOneFairway}}</div>
-        <div class="collapsible-body">Putts: {{selectedCard.holeOnePutts}}</div>
-        <div class="collapsible-body">Notes: {{selectedCard.holeOneNotes}}</div>
-      </li> -->
-      <!-- <li>
-        <div class="collapsible-header"><i class="material-icons"></i>Hole Two</div>
-        <div class="collapsible-body">Score:{{selectedCard.holeTwoScore}}</div>
-        <div class="collapsible-body">Fairway: {{selectedCard.holeTwoFairway}}</div>
-        <div class="collapsible-body">Putts: {{selectedCard.holeTwoPutts}}</div>
-        <div class="collapsible-body">Notes: {{selectedCard.holeTwoNotes}}</div>
-      </li>
-      <li>
-        <div class="collapsible-header"><i class="material-icons"></i>Hole Three</div>
-        <div class="collapsible-body">Score:{{selectedCard.holeThreeScore}}</div>
-        <div class="collapsible-body">Fairway: {{selectedCard.holeThreeFairway}}</div>
-        <div class="collapsible-body">Putts: {{selectedCard.holeThreePutts}}</div>
-        <div class="collapsible-body">Notes: {{selectedCard.holeThreeNotes}}</div>
-      </li>
-      <li>
-        <div class="collapsible-header"><i class="material-icons"></i>Hole Four</div>
-        <div class="collapsible-body">Score:{{selectedCard.holeFourScore}}</div>
-        <div class="collapsible-body">Fairway: {{selectedCard.holeFourFairway}}</div>
-        <div class="collapsible-body">Putts: {{selectedCard.holeFourPutts}}</div>
-        <div class="collapsible-body">Notes: {{selectedCard.holeFourNotes}}</div>
-      </li>
-      <li>
-        <div class="collapsible-header"><i class="material-icons"></i>Hole Five</div>
-        <div class="collapsible-body">Score:{{selectedCard.holeFiveScore}}</div>
-        <div class="collapsible-body">Fairway: {{selectedCard.holeFiveFairway}}</div>
-        <div class="collapsible-body">Putts: {{selectedCard.holeFivePutts}}</div>
-        <div class="collapsible-body">Notes: {{selectedCard.holeFiveNotes}}</div>
-      </li>
-      <li>
-        <div class="collapsible-header"><i class="material-icons"></i>Hole Six</div>
-        <div class="collapsible-body">Score:{{selectedCard.holeSixScore}}</div>
-        <div class="collapsible-body">Fairway: {{selectedCard.holeSixFairway}}</div>
-        <div class="collapsible-body">Putts: {{selectedCard.holeSixPutts}}</div>
-        <div class="collapsible-body">Notes: {{selectedCard.holeSixNotes}}</div>
-      </li>
-      <li>
-        <div class="collapsible-header"><i class="material-icons"></i>Hole Seven</div>
-        <div class="collapsible-body">Score:{{selectedCard.holeSevenScore}}</div>
-        <div class="collapsible-body">Fairway: {{selectedCard.holeSevenFairway}}</div>
-        <div class="collapsible-body">Putts: {{selectedCard.holeSevenPutts}}</div>
-        <div class="collapsible-body">Notes: {{selectedCard.holeSevenNotes}}</div>
-      </li>
-      <li>
-        <div class="collapsible-header"><i class="material-icons"></i>Hole Eight</div>
-        <div class="collapsible-body">Score:{{selectedCard.holeEightScore}}</div>
-        <div class="collapsible-body">Fairway: {{selectedCard.holeEightFairway}}</div>
-        <div class="collapsible-body">Putts: {{selectedCard.holeEightPutts}}</div>
-        <div class="collapsible-body">Notes: {{selectedCard.holeEightNotes}}</div>
-      </li>
-      <li>
-        <div class="collapsible-header"><i class="material-icons"></i>Hole Nine</div>
-        <div class="collapsible-body">Score:{{selectedCard.holeNineScore}}</div>
-        <div class="collapsible-body">Fairway: {{selectedCard.holeNineFairway"></div>
-        <div class="collapsible-body">Putts: {{selectedCard.holeNinePutts}}</div>
-        <div class="collapsible-body">Notes: {{selectedCard.holeNineNotes}}</div>
-      </li>
-      <li>
-        <div class="collapsible-header"><i class="material-icons"></i>Hole Ten</div>
-        <div class="collapsible-body">Score:{{selectedCard.holeTenScore}}</div>
-        <div class="collapsible-body">Fairway: {{selectedCard.holeTenFairway}}</div>
-        <div class="collapsible-body">Putts: {{selectedCard.holeTenPutts}}</div>
-        <div class="collapsible-body">Notes: {{selectedCard.holeTenNotes}}</div>
-      </li>
-      <li>
-        <div class="collapsible-header"><i class="material-icons"></i>Hole Eleven</div>
-        <div class="collapsible-body">Score:{{selectedCard.holeElevenScore}}</div>
-        <div class="collapsible-body">Fairway: {{selectedCard.holeElevenFairway}}</div>
-        <div class="collapsible-body">Putts: {{selectedCard.holeElevenPutts}}</div>
-        <div class="collapsible-body">Notes: {{selectedCard.holeElevenNotes}}</div>
-      </li>
-      <li>
-        <div class="collapsible-header"><i class="material-icons"></i>Hole Twelve</div>
-        <div class="collapsible-body">Score:{{selectedCard.holeTwelveScore}}</div>
-        <div class="collapsible-body">Fairway: {{selectedCard.holeTwelveFairway}}</div>
-        <div class="collapsible-body">Putts: {{selectedCard.holeTwelvePutts}}</div>
-        <div class="collapsible-body">Notes: {{selectedCard.holeTwelveNotes}}</div>
-      </li>
-      <li>
-        <div class="collapsible-header"><i class="material-icons"></i>Hole Thirteen</div>
-        <div class="collapsible-body">Score:{{selectedCard.holeThirteenScore}}</div>
-        <div class="collapsible-body">Fairway: {{selectedCard.holeThirteenFairway}}</div>
-        <div class="collapsible-body">Putts: {{selectedCard.holeThirteenPutts}}</div>
-        <div class="collapsible-body">Notes: {{selectedCard.holeThirteenNotes}}</div>
-      </li>
-      <li>
-        <div class="collapsible-header"><i class="material-icons"></i>Hole Fourteen</div>
-        <div class="collapsible-body">Score:{{selectedCard.holeFourteenScore}}</div>
-        <div class="collapsible-body">Fairway: {{selectedCard.holeFourteenFairway}}</div>
-        <div class="collapsible-body">Putts: {{selectedCard.holeFourteenPutts}}</div>
-        <div class="collapsible-body">Notes: {{selectedCard.holeFourteenNotes}}</div>
-      </li>
-      <li>
-        <div class="collapsible-header"><i class="material-icons"></i>Hole Fifteen</div>
-        <div class="collapsible-body">Score:{{selectedCard.holeFifteenScore}}</div>
-        <div class="collapsible-body">Fairway: {{selectedCard.holeFifteenFairway}}</div>
-        <div class="collapsible-body">Putts: {{selectedCard.holeFifteenPutts}}</div>
-        <div class="collapsible-body">Notes: {{selectedCard.holeFifteenNotes}}</div>
-      </li>
-      <li>
-        <div class="collapsible-header"><i class="material-icons"></i>Hole Sixteen</div>
-        <div class="collapsible-body">Score:{{selectedCard.holeSixteenScore}}</div>
-        <div class="collapsible-body">Fairway: {{selectedCard.holeSixteenFairway}}</div>
-        <div class="collapsible-body">Putts: {{selectedCard.holeSixteenPutts}}</div>
-        <div class="collapsible-body">Notes: {{selectedCard.holeSixteenNotes}}</div>
-      </li>
-      <li>
-        <div class="collapsible-header"><i class="material-icons"></i>Hole Seventeen</div>
-        <div class="collapsible-body">Score:{{selectedCard.holeSeventeenScore}}</div>
-        <div class="collapsible-body">Fairway: {{selectedCard.holeSeventeenFairway}}</div>
-        <div class="collapsible-body">Putts: {{selectedCard.holeSeventeenPutts}}</div>
-        <div class="collapsible-body">Notes: {{selectedCard.holeSeventeenNotes}}</div>
-      </li>
-      <li>
-        <div class="collapsible-header"><i class="material-icons"></i>Hole Eighteen</div>
-        <div class="collapsible-body">Score:{{selectedCard.holeEighteenScore}}</div>
-        <div class="collapsible-body">Fairway: {{selectedCard.holeEighteenFairway}}</div>
-        <div class="collapsible-body">Putts: {{selectedCard.holeEighteenPutts}}</div>
-        <div class="collapsible-body">Notes: {{selectedCard.holeEighteenNotes}}</div>
-      </li>
-       <li>
-        <div class="collapsible-header"><p>{{selectedCard.totalScore}}</p></div>
-      </li> -->
-    
-    <!-- </ul> -->
+     
         <div class="row">
           <div class="col s12 m6">
             <div class="card lime lighten-5" id="allCards">
               <div class="card-content dark-grey-text">
-               <table class="striped">
-                 <thead>
-                   <tr>
+                <table class="striped">
+                  <thead>
+                    <tr>
                        <th data-field="hole"><i class="fa fa-flag-checkered" aria-hidden="true"> Hole</i></th>
                        <th data-field="note"><i class="fa fa-pencil-square-o" aria-hidden="true"> Score</i></th>
                        <th data-field="fairway"><i class="fa fa-bullseye" aria-hidden="true"> Fairway</i></th>
                        <th data-field="putts"><i class="fa fa-crosshairs"> Putts</i></th>
-                   </tr>
-                 </thead>
+                    </tr>
+                  </thead>
 
-                 <tbody>
-                   <tr>
-                     <td>#1</td>
-                     <td>{{selectedCard.holeOneScore}}</td>
-                     <td>{{selectedCard.holeOneFairway}}</td>
-                     <td>{{selectedCard.holeOnePutts}}</td>
-                   </tr>
+                  <tbody>
+                    <tr>
+                      <td>#1</td>
+                      <td>{{selectedCard.holeOneScore}}</td>
+                      <td>{{selectedCard.holeOneFairway}}</td>
+                      <td>{{selectedCard.holeOnePutts}}</td>
+                    </tr>
                   
-                   <tr>
-                     <td>#2</td>
-                     <td>{{selectedCard.holeTwoScore}}</td>
-                     <td>{{selectedCard.holeTwoFairway}}</td>
-                     <td>{{selectedCard.holeTwoPutts}}</td>
-                   </tr>
-                  
-                   <tr>
-                     <td>#3</td>
-                     <td>{{selectedCard.holeThreeScore}}</td>
-                     <td>{{selectedCard.holeThreeFairway}}</td>
-                     <td>{{selectedCard.holeThreePutts}}</td>
-                   </tr>
-                  
-                   <tr>
-                     <td>#4</td>
-                     <td>{{selectedCard.holeFourScore}}</td>
-                     <td>{{selectedCard.holeFourFairway}}</td>
-                     <td>{{selectedCard.holeFourPutts}}</td>
-                   </tr>
-                  
-                   <tr>
-                     <td>#5</td>
-                     <td>{{selectedCard.holeFiveScore}}</td>
-                     <td>{{selectedCard.holeFiveFairway}}</td>
-                     <td>{{selectedCard.holeFivePutts}}</td>
-                   </tr>
-                  
-                   <tr>
-                     <td>#6</td>
-                     <td>{{selectedCard.holeSixScore}}</td>
-                     <td>{{selectedCard.holeSixFairway}}</td>
-                     <td>{{selectedCard.holeSixPutts}}</td>
-                   </tr>
-                  
-                   <tr>
-                     <td>#7</td>
-                     <td>{{selectedCard.holeSevenScore}}</td>
-                     <td>{{selectedCard.holeSevenFairway}}</td>
-                     <td>{{selectedCard.holeSevenPutts}}</td>
-                   </tr>
-                  
-                   <tr>
-                     <td>#8</td>
-                     <td>{{selectedCard.holeEightScore}}</td>
-                     <td>{{selectedCard.holeEightFairway}}</td>
-                     <td>{{selectedCard.holeEightPutts}}</td>
-                   </tr>
-                  
-                   <tr>
-                     <td>#9</td>
-                     <td>{{selectedCard.holeNineScore}}</td>
-                     <td>{{selectedCard.holeNineFairway}}</td>
-                     <td>{{selectedCard.holeNinePutts}}</td>
-                   </tr>
-                  
-                   <tr>
-                     <td>#10</td>
-                     <td>{{selectedCard.holeTenScore}}</td>
-                     <td>{{selectedCard.holeTenFairway}}</td>
-                     <td>{{selectedCard.holeTenPutts}}</td>
-                   </tr>
-                  
-                   <tr>
-                     <td>#11</td>
-                     <td>{{selectedCard.holeElevenScore}}</td>
-                     <td>{{selectedCard.holeElevenFairway}}</td>
-                     <td>{{selectedCard.holeElevenPutts}}</td>
-                   </tr>
-                  
-                   <tr>
-                     <td>#12</td>
-                     <td>{{selectedCard.holeTwelveScore}}</td>
-                     <td>{{selectedCard.holeTwelveFairway}}</td>
-                     <td>{{selectedCard.holeTwelvePutts}}</td>
-                   </tr>
-                  
-                   <tr>
-                     <td>#13</td>
-                     <td>{{selectedCard.holeThirteenScore}}</td>
-                     <td>{{selectedCard.holeThirteenFairway}}</td>
-                     <td>{{selectedCard.holeThirteenPutts}}</td>
-                   </tr>
-                  
-                   <tr>
-                     <td>#14</td>
-                     <td>{{selectedCard.holeFourteenScore}}</td>
-                     <td>{{selectedCard.holeFourteenFairway}}</td>
-                     <td>{{selectedCard.holeFourteenPutts}}</td>
-                   </tr>
-                  
-                   <tr>
-                     <td>#15</td>
-                     <td>{{selectedCard.holeFifteenScore}}</td>
-                     <td>{{selectedCard.holeFifteenFairway}}</td>
-                     <td>{{selectedCard.holeFifteenPutts}}</td>
-                   </tr>
-                  
-                   <tr>
-                     <td>#16</td>
-                     <td>{{selectedCard.holeSixteenScore}}</td>
-                     <td>{{selectedCard.holeSixteenFairway}}</td>
-                     <td>{{selectedCard.holeSixteenPutts}}</td>
-                   </tr>
-                  
-                   <tr>
-                     <td>#17</td>
-                     <td>{{selectedCard.holeSeventeenScore}}</td>
-                     <td>{{selectedCard.holeSeventeenFairway}}</td>
-                     <td>{{selectedCard.holeSeventeenPutts}}</td>
-                   </tr>
-                  
-                   <tr>
-                     <td>#18</td>
-                     <td>{{selectedCard.holeEighteenScore}}</td>
-                     <td>{{selectedCard.holeEighteenFairway}}</td>
-                     <td>{{selectedCard.holeEighteenPutts}}</td>
-                   </tr>
-                  
-                   <tr>
-                     <td></td>
-                     <td></td>
-                     <td></td>
-                     <td></td>
-                   </tr>
-                  
-                   <tr>
-                     <td>Total:</td>
-                     <td></td>
-                     <td></td>
-                     <td>{{selectedCard.roundScore}}</td>
-                   </tr>
-                  
+                    <tr>
+                      <td>#2</td>
+                      <td>{{selectedCard.holeTwoScore}}</td>
+                      <td>{{selectedCard.holeTwoFairway}}</td>
+                      <td>{{selectedCard.holeTwoPutts}}</td>
+                    </tr>
+                    
+                    <tr>
+                      <td>#3</td>
+                      <td>{{selectedCard.holeThreeScore}}</td>
+                      <td>{{selectedCard.holeThreeFairway}}</td>
+                      <td>{{selectedCard.holeThreePutts}}</td>
+                    </tr>
+                    
+                    <tr>
+                      <td>#4</td>
+                      <td>{{selectedCard.holeFourScore}}</td>
+                      <td>{{selectedCard.holeFourFairway}}</td>
+                      <td>{{selectedCard.holeFourPutts}}</td>
+                    </tr>
+                    
+                    <tr>
+                      <td>#5</td>
+                      <td>{{selectedCard.holeFiveScore}}</td>
+                      <td>{{selectedCard.holeFiveFairway}}</td>
+                      <td>{{selectedCard.holeFivePutts}}</td>
+                    </tr>
+                      
+                    <tr>
+                      <td>#6</td>
+                      <td>{{selectedCard.holeSixScore}}</td>
+                      <td>{{selectedCard.holeSixFairway}}</td>
+                      <td>{{selectedCard.holeSixPutts}}</td>
+                    </tr>
+                    
+                    <tr>
+                      <td>#7</td>
+                      <td>{{selectedCard.holeSevenScore}}</td>
+                      <td>{{selectedCard.holeSevenFairway}}</td>
+                      <td>{{selectedCard.holeSevenPutts}}</td>
+                    </tr>
+                    
+                    <tr>
+                      <td>#8</td>
+                      <td>{{selectedCard.holeEightScore}}</td>
+                      <td>{{selectedCard.holeEightFairway}}</td>
+                      <td>{{selectedCard.holeEightPutts}}</td>
+                    </tr>
+                    
+                    <tr>
+                      <td>#9</td>
+                      <td>{{selectedCard.holeNineScore}}</td>
+                      <td>{{selectedCard.holeNineFairway}}</td>
+                      <td>{{selectedCard.holeNinePutts}}</td>
+                    </tr>
+                    
+                    <tr>
+                      <td>#10</td>
+                      <td>{{selectedCard.holeTenScore}}</td>
+                      <td>{{selectedCard.holeTenFairway}}</td>
+                      <td>{{selectedCard.holeTenPutts}}</td>
+                    </tr>
+                    
+                    <tr>
+                      <td>#11</td>
+                      <td>{{selectedCard.holeElevenScore}}</td>
+                      <td>{{selectedCard.holeElevenFairway}}</td>
+                      <td>{{selectedCard.holeElevenPutts}}</td>
+                    </tr>
+                    
+                    <tr>
+                      <td>#12</td>
+                      <td>{{selectedCard.holeTwelveScore}}</td>
+                      <td>{{selectedCard.holeTwelveFairway}}</td>
+                      <td>{{selectedCard.holeTwelvePutts}}</td>
+                    </tr>
+                    
+                    <tr>
+                      <td>#13</td>
+                      <td>{{selectedCard.holeThirteenScore}}</td>
+                      <td>{{selectedCard.holeThirteenFairway}}</td>
+                      <td>{{selectedCard.holeThirteenPutts}}</td>
+                    </tr>
+                    
+                    <tr>
+                      <td>#14</td>
+                      <td>{{selectedCard.holeFourteenScore}}</td>
+                      <td>{{selectedCard.holeFourteenFairway}}</td>
+                      <td>{{selectedCard.holeFourteenPutts}}</td>
+                    </tr>
+                    
+                    <tr>
+                      <td>#15</td>
+                      <td>{{selectedCard.holeFifteenScore}}</td>
+                      <td>{{selectedCard.holeFifteenFairway}}</td>
+                      <td>{{selectedCard.holeFifteenPutts}}</td>
+                    </tr>
+                    
+                    <tr>
+                      <td>#16</td>
+                      <td>{{selectedCard.holeSixteenScore}}</td>
+                      <td>{{selectedCard.holeSixteenFairway}}</td>
+                      <td>{{selectedCard.holeSixteenPutts}}</td>
+                    </tr>
+                    
+                    <tr>
+                      <td>#17</td>
+                      <td>{{selectedCard.holeSeventeenScore}}</td>
+                      <td>{{selectedCard.holeSeventeenFairway}}</td>
+                      <td>{{selectedCard.holeSeventeenPutts}}</td>
+                    </tr>
+                    
+                    <tr>
+                      <td>#18</td>
+                      <td>{{selectedCard.holeEighteenScore}}</td>
+                      <td>{{selectedCard.holeEighteenFairway}}</td>
+                      <td>{{selectedCard.holeEighteenPutts}}</td>
+                    </tr>
+                    
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>Total:</td>
+                      <td></td>
+                      <td></td>
+                      <td>{{selectedCard.roundScore}}</td>
+                    </tr>
                    
 
 
                  </tbody>
                </table>
+               <div id="cardViewEditBtn">
+                 <button><a ng-href="#/scorecards/{{selectedCardId}}/edit">Edit</a></button>
+               </div>
+               <div id="cardViewDeleteBtn">
+                 <button ng-click="addNewScorecard()">Delete Round</button>
+               </div>
               </div>
             </div>
           </div>
@@ -309,10 +183,7 @@
 
     
 
-    <div class="scorecardListBtns">
-      <button ng-click="addNewScorecard()">Delete Card</button>
-      <button ng-click="addNewScorecard()">Edit Card</button>
-    </div>
+    
 
 
   <!-- </div> -->

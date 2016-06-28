@@ -39,3 +39,18 @@ body {
 
 .newCardBtn {
   text-align: center; }
+
+#allCards {
+  border-radius: 10px;
+  box-shadow: 10px 10px 23px 0px #7d8a7c;
+  margin-right: auto;
+  margin-left: auto; }
+
+.allRoundsData ul li {
+  display: inline; }
+
+#cardViewDeleteBtn {
+  text-align: right; }
+
+#cardViewEditBtn {
+  text-align: left; }

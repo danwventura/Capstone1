@@ -1,9 +1,13 @@
-app.controller("CardViewCtrl", function($scope, $http, $routeParams, ScorecardFactory, Authfactory){
+app.controller("CardViewCtrl", function($scope, $http, $routeParams, firebaseURL, ScorecardFactory, AuthFactory){
   $scope.scorecards = [];
   $scope.selectedCard = {};
-  $scope.updatedCard = {};
+  // $scope.updatedCard = {};
+  $scope.selectedCardId = $routeParams.scorecardId;
 
-  console.log("scorecardId", $routeParams.scorecardId);
+  console.log("scorecardIdrp", $routeParams.scorecardId);
+
+  
+
 
   $http.get(firebaseURL + "scorecards.json")
     .success(function(scorecardObject){
@@ -15,7 +19,19 @@ app.controller("CardViewCtrl", function($scope, $http, $routeParams, ScorecardFa
 
         $scope.selectedCard = $scope.scorecards.filter(function(scorecard){
           return scorecard.id === $routeParams.scorecardId;
-        })[0]
+        })[0];
       })
     })
+
+
+
+
+
+
+
+
+
+
+
+
 });

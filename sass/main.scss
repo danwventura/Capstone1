@@ -73,5 +73,42 @@ body{
   text-align:center;
 }
 
+// .scorecardListBtns {
+//   text-align: center;
+//   margin-right: auto;
+//   margin-left: auto;
+// }
 
 //###############################################//
+
+//#################### Scorecard List View #################//
+#allCards {
+  border-radius:10px;
+  box-shadow: 10px 10px 23px 0px rgba(125,138,124,1);
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+
+.allRoundsData ul li {
+  display: inline;
+}
+
+// .holeNotes{
+
+// }
+
+
+#cardViewDeleteBtn{
+  
+  text-align: right;
+}
+
+#cardViewEditBtn{
+  text-align: left;
+}
+
+
+
+//##########################################################//

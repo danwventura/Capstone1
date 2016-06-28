@@ -5,6 +5,8 @@ $scope.title = "New Scorecard"
 $scope.newCard = {
   roundDate:"",
   roundCourse: "",
+  roundScore: "",
+  coursePar: "",
   courseRating: "",
   courseSlope: "",
   courseHandicap: "",
