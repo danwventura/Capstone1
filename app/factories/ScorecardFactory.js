@@ -135,6 +135,16 @@ app.factory("ScorecardFactory", function($q, $http, firebaseURL, AuthFactory) {
     });
   }
 
+  var deleteSingleScorecardFromFirebase = function(selectedCardId){
+    console.log("deletedcardID", selectedCardId);
+    return $q(function(resolve, reject){
+      $http.delete(firebaseURL + `/scorecards/${selectedCardId}.json`)
+        .success(function(changedObjectFromFirebase){
+        resolve(changedObjectFromFirebase)
+        })
+    })
+  }
+
   var updateScorecard = function(updatedCardId, updatedCard){
     console.log("scorecardId for card being updated", updatedCardId);
     return $q(function(resolve, reject){
@@ -236,5 +246,5 @@ app.factory("ScorecardFactory", function($q, $http, firebaseURL, AuthFactory) {
 
 
 
-  return {postNewScorecard:postNewScorecard, getScorecardsFromFirebase:getScorecardsFromFirebase, getSingleScorecardFromFirebase:getSingleScorecardFromFirebase, updateScorecard:updateScorecard}
+  return {postNewScorecard:postNewScorecard, getScorecardsFromFirebase:getScorecardsFromFirebase, getSingleScorecardFromFirebase:getSingleScorecardFromFirebase, updateScorecard:updateScorecard, deleteSingleScorecardFromFirebase:deleteSingleScorecardFromFirebase}
 });

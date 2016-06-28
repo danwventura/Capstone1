@@ -1,7 +1,7 @@
 
       <div class="newRoundData">
         
-        <h5>{{selectedCard.roundCourse}} {{selectedCard.roundDate}} </h5>
+        <h5>{{selectedCard.roundCourse}} {{selectedCard.roundDate}}</h5>
     
         <div><h5>Round Score:  {{selectedCard.roundScore}}</h5></div>      
         <div><h6>Course Rating:  <strong>{{selectedCard.courseRating}}</strong></h6></div>
@@ -173,7 +173,7 @@
                  <button><a ng-href="#/scorecards/{{selectedCardId}}/edit">Edit</a></button>
                </div>
                <div id="cardViewDeleteBtn">
-                 <button ng-click="addNewScorecard()">Delete Round</button>
+                 <button ng-click="deleteSingleScorecard()">Delete Round</button>
                </div>
               </div>
             </div>
