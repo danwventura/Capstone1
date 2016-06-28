@@ -40,6 +40,16 @@ app.config(function($routeProvider){
   controller: 'AllCardsCtrl',
   resolve: {isAuth}
   }).
+  when('/scorecards/:scorecardId',{
+  templateUrl: 'partials/scorecardDetails.html',
+  controller: 'CardViewCtrl',
+  resolve: {isAuth}
+  }).
+  when('/scorecards/:scorecardId/edit',{
+  templateUrl: 'partials/editCard.html',
+  controller: 'EditCardCtrl',
+  resolve: {isAuth}
+  }).
   when('/stats',{
   templateUrl: 'partials/stats.html',
   controller: 'StatsCtrl',

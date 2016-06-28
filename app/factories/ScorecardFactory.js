@@ -5,14 +5,14 @@ app.factory("ScorecardFactory", function($q, $http, firebaseURL, AuthFactory) {
   var getScorecardsFromFirebase = function(){
     var scorecards = [];
     let user = AuthFactory.getUser();
-    console.log("user", user);
+    // console.log("user", user);
     return $q(function(resolve, reject){
     $http.get(`${firebaseURL}scorecards.json`)
       .success(function(scorecardObject){
         var scorecardCollection = scorecardObject;
         Object.keys(scorecardCollection).forEach(function(key){
         scorecardCollection[key].id=key
-        console.log("key", key);
+        // console.log("key", key);
         scorecards.push(scorecardCollection[key])
       });
       resolve(scorecards);
@@ -35,6 +35,8 @@ app.factory("ScorecardFactory", function($q, $http, firebaseURL, AuthFactory) {
         JSON.stringify({
           roundDate:newCard.roundDate,
           roundCourse:newCard.roundCourse,
+          roundScore:"",
+          coursePar: "",
           courseRating:newCard.courseRating, 
           courseSlope:newCard.courseSlope, 
           courseHandicap:"",
@@ -121,8 +123,118 @@ app.factory("ScorecardFactory", function($q, $http, firebaseURL, AuthFactory) {
     });
   };
 
+  var getSingleScorecardFromFirebase = function (scorecardId){
+    return $q(function(resolve, reject){
+      $http.get(firebaseURL + "scorecards/" + scorecardId + ".json")
+        .success(function(scorecardObject){
+          resolve(scorecardObject)
+        })
+        .error(function(error){
+          reject(error);
+        });
+    });
+  }
+
+  var updateScorecard = function(updatedCardId, updatedCard){
+    console.log("scorecardId for card being updated", updatedCardId);
+    return $q(function(resolve, reject){
+      $http.put(
+        firebaseURL + "scorecards/" + updatedCardId + ".json",
+         JSON.stringify({
+          roundDate:updatedCard.roundDate,
+          roundCourse:updatedCard.roundCourse,
+          courseRating:updatedCard.courseRating, 
+          courseSlope:updatedCard.courseSlope, 
+          courseHandicap:updatedCard.courseHandicap,
+          holeOneScore:updatedCard.holeOneScore,
+          holeOneFairway:updatedCard.holeOneFairway,
+          holeOnePutts:updatedCard.holeOnePutts,
+          holeOneNotes:updatedCard.holeOneNotes,
+          holeTwoScore:updatedCard.holeTwoScore,
+          holeTwoFairway:updatedCard.holeTwoFairway,
+          holeTwoPutts:updatedCard.holeTwoPutts,
+          holeTwoNotes:updatedCard.holeTwoNotes,
+          holeThreeScore:updatedCard.holeThreeScore,
+          holeThreeFairway:updatedCard.holeThreeFairway,
+          holeThreePutts:updatedCard.holeThreePutts,
+          holeThreeNotes:updatedCard.holeThreeNotes,
+          holeFourScore:updatedCard.holeFourScore,
+          holeFourFairway:updatedCard.holeFourFairway,
+          holeFourPutts:updatedCard.holeFourPutts,
+          holeFourNotes:updatedCard.holeFourNotes,
+          holeFiveScore:updatedCard.holeFiveScore,
+          holeFiveFairway:updatedCard.holeFiveFairway,
+          holeFivePutts:updatedCard.holeFivePutts,
+          holeFiveNotes:updatedCard.holeFiveNotes,
+          holeSixScore:updatedCard.holeSixScore,
+          holeSixFairway:updatedCard.holeSixFairway,
+          holeSixPutts:updatedCard.holeSixPutts,
+          holeSixNotes:updatedCard.holeSixNotes,
+          holeSevenScore:updatedCard.holeSevenScore,
+          holeSevenFairway:updatedCard.holeSevenFairway,
+          holeSevenPutts:updatedCard.holeSevenPutts,
+          holeSevenNotes:updatedCard.holeSevenNotes,
+          holeEightScore:updatedCard.holeEightScore,
+          holeEightFairway:updatedCard.holeEightFairway,
+          holeEightPutts:updatedCard.holeEightPutts,
+          holeEightNotes:updatedCard.holeEightNotes,
+          holeNineScore:updatedCard.holeNineScore,
+          holeNineFairway:updatedCard.holeNineFairway,
+          holeNinePutts:updatedCard.holeNinePutts,
+          holeNineNotes:updatedCard.holeNineNotes,
+          holeTenScore:updatedCard.holeTenScore,
+          holeTenFairway:updatedCard.holeTenFairway,
+          holeTenPutts:updatedCard.holeTenPutts,
+          holeTenNotes:updatedCard.holeTenNotes,
+          holeElevenScore:updatedCard.holeElevenScore,
+          holeElevenFairway:updatedCard.holeElevenFairway,
+          holeElevenPutts:updatedCard.holeElevenPutts,
+          holeElevenNotes:updatedCard.holeElevenNotes,
+          holeTwelveScore:updatedCard.holeTwelveScore,
+          holeTwelveFairway:updatedCard.holeTwelveFairway,
+          holeTwelvePutts:updatedCard.holeTwelvePutts,
+          holeTwelveNotes:updatedCard.holeTwelveNotes,
+          holeThirteenScore:updatedCard.holeThirteenScore,
+          holeThirteenFairway:updatedCard.holeThirteenFairway,
+          holeThirteenPutts:updatedCard.holeThirteenPutts,
+          holeThirteenNotes:updatedCard.holeThirteenNotes,
+          holeFourteenScore:updatedCard.holeFourteenScore,
+          holeFourteenFairway:updatedCard.holeFourteenFairway,
+          holeFourteenPutts:updatedCard.holeFourteenPutts,
+          holeFourteenNotes:updatedCard.holeFourteenNotes,
+          holeFifteenScore:updatedCard.holeFifteenScore,
+          holeFifteenFairway:updatedCard.holeFifteenFairway,
+          holeFifteenPutts:updatedCard.holeFifteenPutts,
+          holeFifteenNotes:updatedCard.holeFifteenNotes,
+          holeSixteenScore:updatedCard.holeSixteenScore,
+          holeSixteenFairway:updatedCard.holeSixteenFairway,
+          holeSixteenPutts:updatedCard.holeSixteenPutts,
+          holeSixteenNotes:updatedCard.holeSixteenNotes,
+          holeSeventeenScore:updatedCard.holeSeventeenScore,
+          holeSeventeenFairway:updatedCard.holeSeventeenFairway,
+          holeSeventeenPutts:updatedCard.holeSeventeenPutts,
+          holeSeventeenNotes:updatedCard.holeSeventeenNotes,
+          holeEighteenScore:updatedCard.holeEighteenScore,
+          holeEighteenFairway:updatedCard.holeEighteenFairway,
+          holeEighteenPutts:updatedCard.holeEighteenPutts,
+          holeEighteenNotes:updatedCard.holeEighteenNotes,
+          uid:updatedCard.uid
+
+          })
+        )
+        .success(
+          function(newObjectFromFirebase){
+            resolve(newObjectFromFirebase)
+          }
+       )
+        .error(function(error){
+          reject(error);
+        });
+    });
+  }
 
 
 
-  return {postNewScorecard:postNewScorecard, getScorecardsFromFirebase:getScorecardsFromFirebase}
+
+  return {postNewScorecard:postNewScorecard, getScorecardsFromFirebase:getScorecardsFromFirebase, getSingleScorecardFromFirebase:getSingleScorecardFromFirebase, updateScorecard:updateScorecard}
 });
