@@ -94,7 +94,7 @@ $scope.newCard = {
     ScorecardFactory.postNewScorecard($scope.newCard)
       .then(function(response){
         console.log("res", response);
-        // $location.url("/scorecards/all");
+        $location.url("/scorecards/all");
       });
   };
 });
