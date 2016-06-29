@@ -1,5 +1,16 @@
-
-      <div class="newRoundData">
+    <div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px;">
+        <a class="btn-floating btn-large orange">
+          <i class="fa fa-bars"></i>
+        </a>
+        <ul>
+          <li><a class="btn-floating btn-large red"><i class="fa fa-sign-out"></i></a></li>
+          <li><a class="btn-floating btn-large orange"><i class="fa fa-percent"></i></a></li>
+          <li><a class="btn-floating btn-large green"><i class="fa fa-book"></i></a></li>
+          <li><a class="btn-floating btn-large blue"><i class="fa fa-table"></i></a></li>
+          <li><a class="btn-floating btn-large yellow darken-1"><i class="fa fa-cloud"></i></a></li>
+        </ul>
+    </div>
+    <div class="newRoundData">
         
         <h5>{{selectedCard.roundCourse}} {{selectedCard.roundDate}}</h5>
     
@@ -7,7 +18,7 @@
         <div><h6>Course Rating:  <strong>{{selectedCard.courseRating}}</strong></h6></div>
         <div><h6>Course Slope:  <strong>{{selectedCard.courseSlope}}</strong></h6></div>
         <div><h6>Round Date:  <strong>{{selectedCard.roundDate}}</strong></h6></div>
-      </div>
+    </div>
 
      
         <div class="row">
@@ -169,10 +180,10 @@
 
                  </tbody>
                </table>
-               <div id="cardViewEditBtn">
+               <div id="cardViewEditBtn" class="button">
                  <button><a ng-href="#/scorecards/{{selectedCardId}}/edit">Edit</a></button>
                </div>
-               <div id="cardViewDeleteBtn">
+               <div id="cardViewDeleteBtn" class="button">
                  <button ng-click="deleteSingleScorecard()">Delete Round</button>
                </div>
               </div>
