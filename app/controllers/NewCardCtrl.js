@@ -5,11 +5,19 @@ $scope.title = "New Scorecard"
 $scope.newCard = {
   roundDate:"",
   roundCourse: "",
-  roundScore: "",
+  frontScore: "",
+  frontPutts: "",
+  frontFairways:"",
+  backScore: "",
+  backPutts: "",
+  backFairways: "",
+  totalScore: "",
+  totalPutts: "",
+  totalFairways: "",
   coursePar: "",
   courseRating: "",
   courseSlope: "",
-  courseHandicap: "",
+  roundHandicap: "",
   holeOneScore:"",
   holeOneFairway: "",
   holeOnePutts: "",
@@ -84,11 +92,7 @@ $scope.newCard = {
   holeEighteenNotes: ""
 };
 
-// $scope.$watch($scope.newCard.holeEighteenScore , function(){
-//   $scope.totalScore = 0 + $scope.newCard.holeEighteenScore
 
-//   return $scope.totalScore
-// })
 
   $scope.addNewScorecard = function(){
     ScorecardFactory.postNewScorecard($scope.newCard)
@@ -98,3 +102,4 @@ $scope.newCard = {
       });
   };
 });
+

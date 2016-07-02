@@ -13,24 +13,34 @@
     </ul>
   </div>
 
-<ul class="collapsible" data-collapsible="accordion" watch>
+<ul id="newCardStyle" class="collapsible" data-collapsible="accordion" watch>
   <h4>{{title}}</h4>
     
   <div class="newRoundData">
-    <label>Today's Date:</label>
-    <input type="text" ng-model="newCard.roundDate"/>
-
-    <label>Course Name:</label>
-    <input type="text" ng-model="newCard.roundCourse"/>
+    <div>
+      <label>Today's Date:</label>
+      <input type="text" ng-model="newCard.roundDate"/>
+    </div>
     
-    <label>Course Par:</label>
-    <input type="text" ng-model="newCard.coursePar"/>
+    <div>
+      <label>Course Name:</label>
+      <input type="text" ng-model="newCard.roundCourse"/>
+    </div>
     
-    <label>Course Rating:</label>
-    <input type="text" ng-model="newCard.courseRating"/>
+    <div>
+      <label>Course Par:</label>
+      <input type="text" ng-model="newCard.coursePar"/>
+    </div>
     
-    <label>Course Slope:</label>
-    <input type="text" ng-model="newCard.courseSlope"/>
+    <div>
+      <label>Course Rating:</label>
+      <input type="text" ng-model="newCard.courseRating"/>
+    </div>
+    
+    <div>
+      <label>Course Slope:</label>
+      <input type="text" ng-model="newCard.courseSlope"/>
+    </div>
     
   </div>
 
@@ -161,8 +171,39 @@
     <div class="collapsible-body">Notes: <input type="text" ng-model="newCard.holeEighteenNotes"></div>
   </li>
    <li>
-    <div class="collapsible-header"><p>{{totalScore}}</p></div>
+    <div class="collapsible-header">
+      <div class="newFrontTotals">
+        <h6>Front</h6>
+        <p>Strokes</p><p ng-model="newCard.frontScore">{{newCard.holeOneScore--newCard.holeTwoScore--newCard.holeThreeScore--newCard.holeFourScore--newCard.holeFiveScore--newCard.holeSixScore--newCard.holeSevenScore--newCard.holeEightScore--newCard.holeNineScore}}</p>
+        <p>Putts</p><p ng-model="newCard.frontPutts">{{newCard.holeOnePutts--newCard.holeTwoPutts--newCard.holeThreePutts--newCard.holeFourPutts--newCard.holeFivePutts--newCard.holeSixPutts--newCard.holeSevenPutts--newCard.holeEightPutts--newCard.holeNinePutts}}</p>
+        <p>Fairway</p><p ng-model="newCard.frontFairways">{{newCard.holeOneFairway--newCard.holeTwoFairway--newCard.holeThreeFairway--newCard.holeFourFairway--newCard.holeFiveFairway--newCard.holeSixFairway--newCard.holeSevenFairway--newCard.holeEightFairway--newCard.holeNineFairway}}</p>
+      </div>
+    </div>
   </li>
+      
+  <li>
+    <div class="collapsible-header">
+      <div class="newBackTotals">
+        <h6>Back</h6>
+        <p>Strokes</p><p ng-model="newCard.backScore">{{newCard.holeTenScore--newCard.holeElevenScore--newCard.holeTwelveScore--newCard.holeThirteenScore--newCard.holeFourteenScore--newCard.holeFifteenScore--newCard.holeSixteenScore--newCard.holeSeventeenScore--newCard.holeEighteenScore}}</p>
+        <p>Putts</p><p ng-model="newCard.backPutts">{{newCard.holeTenPutts--newCard.holeElevenPutts--newCard.holeTwelvePutts--newCard.holeThirteenPutts--newCard.holeFourteenPutts--newCard.holeFifteenPutts--newCard.holeSixteenPutts--newCard.holeSeventeenPutts--newCard.holeEighteenPutts}}</p>
+        <p>Fairways</p><p ng-model="newCard.backFairways">{{newCard.holeTenFairway--newCard.holeElevenFairway--newCard.holeTwelveFairway--newCard.holeThirteenFairway--newCard.holeFourteenFairway--newCard.holeFifteenFairway--newCard.holeSixteenFairway--newCard.holeSeventeenFairway--newCard.holeEighteenFairway}}</p>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="collapsible-header">
+      <div class="newRoundTotals">
+        <h6>Totals</h6>
+        <p>Strokes</p><p>{{newCard.holeOneScore--newCard.holeTwoScore--newCard.holeThreeScore--newCard.holeFourScore--newCard.holeFiveScore--newCard.holeSixScore--newCard.holeSevenScore--newCard.holeEightScore--newCard.holeNineScore--newCard.holeTenScore--newCard.holeElevenScore--newCard.holeTwelveScore--newCard.holeThirteenScore--newCard.holeFourteenScore--newCard.holeFifteenScore--newCard.holeSixteenScore--newCard.holeSeventeenScore--newCard.holeEighteenScore}}</p>
+        <p>Putts</p><p>{{newCard.holeOnePutts--newCard.holeTwoPutts--newCard.holeThreePutts--newCard.holeFourPutts--newCard.holeFivePutts--newCard.holeSixPutts--newCard.holeSevenPutts--newCard.holeEightPutts--newCard.holeNinePutts--newCard.holeTenPutts--newCard.holeElevenPutts--newCard.holeTwelvePutts--newCard.holeThirteenPutts--newCard.holeFourteenPutts--newCard.holeFifteenPutts--newCard.holeSixteenPutts--newCard.holeSeventeenPutts--newCard.holeEighteenPutts}}</p>
+        <p>Fairways</p><p>{{newCard.holeOneFairway--newCard.holeTwoFairway--newCard.holeThreeFairway--newCard.holeFourFairway--newCard.holeFiveFairway--newCard.holeSixFairway--newCard.holeSevenFairway--newCard.holeEightFairway--newCard.holeNineFairway--newCard.holeTenFairway--newCard.holeElevenFairway--newCard.holeTwelveFairway--newCard.holeThirteenFairway--newCard.holeFourteenFairway--newCard.holeFifteenFairway--newCard.holeSixteenFairway--newCard.holeSeventeenFairway--newCard.holeEighteenFairway}}</p>
+      </div>
+    </div>
+  </li>
+      
+    
+
 </ul>
 
 

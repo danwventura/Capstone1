@@ -41,7 +41,7 @@ body{
   margin-bottom: 30px;
   font-size: 26px;
   width: 100%;
-  background-color: rgba(205, 195, 103, 1)
+  background-color: rgba(205, 195, 103, 1);
   color: #82c782;
 }
 
@@ -170,8 +170,8 @@ body{
   width: 70%;
   margin-right: auto;
   margin-left: auto;
-  
 }
+
 
 .newRoundData label {
   font-size: 20px;
@@ -186,6 +186,7 @@ body{
  width:70%;
  margin-left: auto;
  margin-right: auto;
+ background-color: #F9FBE7;
 
 }
 
@@ -200,6 +201,24 @@ body{
 .newCardBtn{
   text-align:center;
 }
+
+
+.newFrontTotals {
+  background-color:$mainNewBtnColor;
+}
+
+
+
+.newBackTotals {
+  background-color:$mainWeatherBtnColor;
+}
+
+
+
+.newRoundTotals {
+  background-color:$mainStatBtnColor;
+}
+
 
 // .scorecardListBtns {
 //   text-align: center;

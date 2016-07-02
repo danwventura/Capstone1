@@ -18,12 +18,13 @@ body {
   margin-bottom: 30px;
   font-size: 26px;
   width: 100%;
-  background-color: #cdc367; }
-
-.loginBtn {
+  background-color: #cdc367;
   color: #82c782; }
 
-.registerBtn {
+.btn-info p {
+  text-color: #82c782; }
+
+#registerBtn {
   color: #82c782; }
 
 .temp li {
@@ -101,7 +102,8 @@ body {
   text-align: center;
   width: 70%;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  background-color: #F9FBE7; }
 
 .collapsible-header {
   font-size: 15px; }
@@ -111,6 +113,15 @@ body {
 
 .newCardBtn {
   text-align: center; }
+
+.newFrontTotals {
+  background-color: #7bc78f; }
+
+.newBackTotals {
+  background-color: #7B8Dc7; }
+
+.newRoundTotals {
+  background-color: #c77b8e; }
 
 #allCards {
   border-radius: 10px;
