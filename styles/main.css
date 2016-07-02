@@ -3,7 +3,28 @@ html {
   font-family: 'Roboto Condensed', sans-serif; }
 
 body {
-  background: mediumspringgreen; }
+  background-image: url("../img/argyle-pattern-green-white.jpg");
+  width: 100%; }
+
+.card-content {
+  text-align: center;
+  margin-left: 0px;
+  margin-right: 0px; }
+
+.loginBtns button {
+  padding-left: 8px;
+  padding-right: 14px;
+  margin-right: 7px;
+  margin-bottom: 30px;
+  font-size: 26px;
+  width: 100%;
+  background-color: #cdc367; }
+
+.loginBtn {
+  color: #82c782; }
+
+.registerBtn {
+  color: #82c782; }
 
 .temp li {
   display: inline; }
@@ -14,8 +35,58 @@ body {
   padding-left: 5px;
   padding-right: 5px; }
 
-.weatherCard {
-  border: 4px solid black; }
+.mainViewBtns {
+  margin-left: 16%;
+  margin-top: 175px; }
+
+.mainViewBtns1 {
+  margin-bottom: 30px; }
+
+#weatherBtn {
+  width: 32%;
+  height: 95px;
+  margin-right: 7%;
+  margin-left: -16%;
+  border-radius: 10px;
+  background-color: #7B8Dc7; }
+
+#weatherBtn i {
+  color: #fff;
+  opacity: 0.65; }
+
+#newBtn {
+  width: 32%;
+  height: 95px;
+  margin-left: 0px;
+  border-radius: 10px;
+  background-color: #7bc78f; }
+
+#newBtn i {
+  color: #fff;
+  opacity: 0.5; }
+
+#bookBtn {
+  width: 32%;
+  height: 95px;
+  margin-right: 7%;
+  margin-left: -16%;
+  border-radius: 10px;
+  background-color: #8e7bc7; }
+
+#bookBtn i {
+  color: #fff;
+  opacity: 0.5; }
+
+#statsBtn {
+  width: 32%;
+  height: 95px;
+  margin-left: 0px;
+  border-radius: 10px;
+  background-color: #c77b8e; }
+
+#statsBtn i {
+  color: #fff;
+  opacity: 0.5; }
 
 .newRoundData {
   text-align: center;

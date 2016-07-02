@@ -1,14 +1,64 @@
-$testColor: mediumspringgreen;
+//###################### COLORS #####################//
+$mainBtnsIconColor: #fff;
+$mainWeatherBtnColor: #7B8Dc7;
+$mainNewBtnColor: #7bc78f;
+$mainBookBtnColor: #8e7bc7;
+$mainStatBtnColor: #c77b8e;
+
+
+
+
+
+//###################################################//
+//################### GENERAL ######################//
 
 html{
   font-size: 25px;
   font-family: 'Roboto Condensed', sans-serif;
+
+  
 }
 
 
 body{
-  background: $testColor;
+  background-image: url('../img/argyle-pattern-green-white.jpg');
+  width:100%;
 }
+//##################################################//
+
+
+//##################### LOGIN ######################//
+.card-content{
+  text-align:center;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.loginBtns button{
+  padding-left: 8px;
+  padding-right:14px;
+  margin-right: 7px;
+  margin-bottom: 30px;
+  font-size: 26px;
+  width: 100%;
+  background-color: rgba(205, 195, 103, 1)
+  color: #82c782;
+}
+
+.btn-info p{
+  text-color: #82c782;
+
+}
+
+#registerBtn {
+  color: #82c782;
+
+}
+
+
+//#################################################//
+
+
 
 //################## NAV #######################//
 .temp li {
@@ -26,11 +76,88 @@ body{
 
 //#############################################//
 
-//################# WEATHER CARD ##################//
-.weatherCard {
-  border: 4px solid black;
-  
+
+//################# MAIN VIEW BUTTONS ##################//
+
+
+.mainViewBtns{
+  margin-left: 16%;
+  margin-top: 175px;
+
 }
+
+.mainViewBtns1{
+  margin-bottom: 30px;
+}
+
+
+
+
+#weatherBtn{
+  width: 32%;
+  height: 95px;
+  margin-right: 7%;
+  margin-left: -16%;
+  border-radius: 10px;
+  background-color: $mainWeatherBtnColor;
+}
+
+#weatherBtn i {
+  color: $mainBtnsIconColor;
+  opacity: 0.65;
+}
+
+#newBtn{
+  width: 32%;
+  height: 95px;
+  margin-left: 0px;
+  border-radius: 10px;
+  background-color: $mainNewBtnColor;
+}
+
+#newBtn i {
+  color: $mainBtnsIconColor;
+  opacity: 0.5;
+}
+
+#bookBtn{
+  width: 32%;
+  height: 95px;
+  margin-right: 7%;
+  margin-left: -16%;
+  border-radius: 10px;
+  background-color: $mainBookBtnColor;
+}
+
+#bookBtn i {
+  color: $mainBtnsIconColor;
+  opacity: 0.5;
+}
+
+#statsBtn{
+  width: 32%;
+  height: 95px;
+  margin-left: 0px;
+  border-radius: 10px;
+  background-color: $mainStatBtnColor;
+}
+
+#statsBtn i{
+  color: $mainBtnsIconColor;
+  opacity: 0.5;
+}
+
+
+
+
+//#############################################//
+
+
+//################# WEATHER CARD ##################//
+// .weatherCard {
+//   border: 4px solid black;
+  
+// }
 
 
 
