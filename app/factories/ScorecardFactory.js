@@ -24,7 +24,6 @@ app.factory("ScorecardFactory", function($q, $http, firebaseURL, AuthFactory) {
   };
 
 
-
   var postNewScorecard = function(newCard){
     let user = AuthFactory.getUser();
     console.log("current user", user);
@@ -35,11 +34,19 @@ app.factory("ScorecardFactory", function($q, $http, firebaseURL, AuthFactory) {
         JSON.stringify({
           roundDate:newCard.roundDate,
           roundCourse:newCard.roundCourse,
-          roundScore:"",
-          coursePar: "",
+          frontScore:newCard.frontScore,
+          frontPutts:newCard.frontPutts,
+          frontFairways:newCard.frontFairways,
+          backScore:newCard.backScore,
+          backPutts:newCard.backPutts,
+          backFairways:newCard.backFairways,
+          totalScore:newCard.totalScore,
+          totalPutts:newCard.totalPutts,
+          totalFairways:newCard.totalFairways,
+          coursePar: newCard.coursePar,
           courseRating:newCard.courseRating, 
           courseSlope:newCard.courseSlope, 
-          courseHandicap:"",
+          roundHandicap:newCard.roundHandicap,
           holeOneScore:newCard.holeOneScore,
           holeOneFairway:newCard.holeOneFairway,
           holeOnePutts:newCard.holeOnePutts,

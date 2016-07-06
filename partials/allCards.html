@@ -1,19 +1,19 @@
 
 
   
-  <!-- <div ng-repeat="scorecard in allScorecards">
-    <ul class="collapsible" data-collapsible="accordion" watch>
-      <div class="allRoundsIcon"><i class="fa fa-table" aria-hidden="true"></i></div>
-      <h5><a ng-href="">{{scorecard.roundCourse}} ({{scorecard.roundDate}})</a></h5>
-    
-      <div class="allRoundsData">
-        <ul>
-          <li><label>Course Rating:</label><p>{{scorecard.courseRating}}</p></li>
-          <li><label>Course Slope:</label><p>{{scorecard.courseSlope}}</p></li>
-          <li><label>Course Score:</label><p>{{scorecard.roundScore}}</p></li>
-        </ul>
-      </div>
-  </div> -->
+  <div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large orange">
+      <i class="fa fa-bars"></i>
+    </a>
+    <ul>
+      <li><a class="btn-floating btn-large red"><i class="fa fa-sign-out"></i></a></li>
+      <li><a class="btn-floating btn-large orange"><i class="fa fa-percent"></i></a></li>
+      <li><a class="btn-floating btn-large green"><i class="fa fa-book"></i></a></li>
+      <li><a class="btn-floating btn-large blue"><i class="fa fa-table"></i></a></li>
+      <li><a class="btn-floating btn-large yellow darken-1"><i class="fa fa-cloud"></i></a></li>
+    </ul>
+  </div>
+  
       <div ng-repeat="scorecard in allScorecards">
         <div class="row">
           <div class="col s12 m6">
@@ -23,8 +23,8 @@
                 <h5><a ng-href="#/scorecards/{{scorecard.id}}">{{scorecard.roundCourse}}  ({{scorecard.roundDate}})</a></h5>
                 <div class="allRoundsData">
                   <ul>
-                    <li><label><h6>Round Score:</h6></label><h5>{{scorecard.roundScore}}</h5></li>
-                    <li><label>Course Par:</label><p>{{scorecard.coursePar}}</p></li>
+                    <li><label><h6>Round Score:</h6></label><h5>{{scorecard.totalScore}}</h5></li>
+                    <li><label>Round Handicap:</label><p>{{scorecard.roundHandicap}}</p></li>
                     <li><label>Course Rating:</label><p>{{scorecard.courseRating}}</p></li>
                     <li><label>Course Slope:</label><p>{{scorecard.courseSlope}}</p></li>
                   </ul>

@@ -5,11 +5,19 @@ $scope.title = "New Scorecard"
 $scope.newCard = {
   roundDate:"",
   roundCourse: "",
-  roundScore: "",
+  frontScore: "",
+  frontPutts: "",
+  frontFairways:"",
+  backScore: "",
+  backPutts: "",
+  backFairways: "",
+  totalScore: "",
+  totalPutts: "",
+  totalFairways: "",
   coursePar: "",
-  courseRating: "",
-  courseSlope: "",
-  courseHandicap: "",
+  // courseRating: "",
+  // courseSlope: "",
+  roundHandicap: "",
   holeOneScore:"",
   holeOneFairway: "",
   holeOnePutts: "",
@@ -84,13 +92,40 @@ $scope.newCard = {
   holeEighteenNotes: ""
 };
 
-// $scope.$watch($scope.newCard.holeEighteenScore , function(){
-//   $scope.totalScore = 0 + $scope.newCard.holeEighteenScore
+  
 
-//   return $scope.totalScore
-// })
+  
 
-  $scope.addNewScorecard = function(){
+  $scope.createTotals = function(){
+    var frontStrokes = angular.element('#newRoundFrontStrokes')[0].attributes.value.value;
+
+    var backStrokes = angular.element('#newRoundBackStrokes')[0].attributes.value.value;
+
+
+    var totalScore = angular.element('#newRoundTotalScore')[0].attributes.value.value;
+
+    var roundHandicap = Math.round(((totalScore - 71.4) * 113)/113);
+
+
+    $scope.addNewScorecard(frontStrokes, backStrokes, totalScore, roundHandicap)
+    }
+
+
+
+
+
+
+
+   
+  $scope.addNewScorecard = function(frontStrokes, backStrokes, totalScore, roundHandicap){
+      
+      $scope.newCard.frontScore = frontStrokes;
+      $scope.newCard.backScore = backStrokes;
+      $scope.newCard.totalScore = totalScore;
+      $scope.newCard.roundHandicap = roundHandicap;
+
+
+
     ScorecardFactory.postNewScorecard($scope.newCard)
       .then(function(response){
         console.log("res", response);
@@ -98,3 +133,4 @@ $scope.newCard = {
       });
   };
 });
+
