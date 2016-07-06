@@ -15,8 +15,8 @@ $scope.newCard = {
   totalPutts: "",
   totalFairways: "",
   coursePar: "",
-  courseRating: "",
-  courseSlope: "",
+  // courseRating: "",
+  // courseSlope: "",
   roundHandicap: "",
   holeOneScore:"",
   holeOneFairway: "",
@@ -92,9 +92,40 @@ $scope.newCard = {
   holeEighteenNotes: ""
 };
 
+  
+
+  
+
+  $scope.createTotals = function(){
+    var frontStrokes = angular.element('#newRoundFrontStrokes')[0].attributes.value.value;
+
+    var backStrokes = angular.element('#newRoundBackStrokes')[0].attributes.value.value;
 
 
-  $scope.addNewScorecard = function(){
+    var totalScore = angular.element('#newRoundTotalScore')[0].attributes.value.value;
+
+    var roundHandicap = Math.round(((totalScore - 71.4) * 113)/113);
+
+
+    $scope.addNewScorecard(frontStrokes, backStrokes, totalScore, roundHandicap)
+    }
+
+
+
+
+
+
+
+   
+  $scope.addNewScorecard = function(frontStrokes, backStrokes, totalScore, roundHandicap){
+      
+      $scope.newCard.frontScore = frontStrokes;
+      $scope.newCard.backScore = backStrokes;
+      $scope.newCard.totalScore = totalScore;
+      $scope.newCard.roundHandicap = roundHandicap;
+
+
+
     ScorecardFactory.postNewScorecard($scope.newCard)
       .then(function(response){
         console.log("res", response);

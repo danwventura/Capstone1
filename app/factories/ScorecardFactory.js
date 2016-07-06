@@ -46,7 +46,7 @@ app.factory("ScorecardFactory", function($q, $http, firebaseURL, AuthFactory) {
           coursePar: newCard.coursePar,
           courseRating:newCard.courseRating, 
           courseSlope:newCard.courseSlope, 
-          courseHandicap:newCard.courseHandicap,
+          roundHandicap:newCard.roundHandicap,
           holeOneScore:newCard.holeOneScore,
           holeOneFairway:newCard.holeOneFairway,
           holeOnePutts:newCard.holeOnePutts,
