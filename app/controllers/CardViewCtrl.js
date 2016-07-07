@@ -2,8 +2,6 @@ app.controller("CardViewCtrl", function($scope, $http, $routeParams, $location, 
   $scope.scorecards = [];
   $scope.selectedCard = {};
   $scope.selectedCardId = $routeParams.scorecardId;
-  let selectedCardId = $routeParams.scorecardId;
-
 
   
 
@@ -17,15 +15,15 @@ app.controller("CardViewCtrl", function($scope, $http, $routeParams, $location, 
         $scope.scorecards.push(scorecardCollection[key]);
 
         $scope.selectedCard = $scope.scorecards.filter(function(scorecard){
-          return scorecard.id === $routeParams.scorecardId;
           console.log("$routeParamsId", $routeParams.scorecardId);
+          return scorecard.id === $routeParams.scorecardId;
         })[0];
       })
     })
 
 
-  $scope.deleteSingleScorecard = function(selectedCardId){
-    console.log("selectedCardIdNotScope", selectedCardId);
+  $scope.deleteSingleScorecard = function(){
+    let selectedCardId = $routeParams.scorecardId;
     ScorecardFactory.deleteSingleScorecardFromFirebase(selectedCardId).then(function(response){
       $scope.allScorecards = [];
       ScorecardFactory.getScorecardsFromFirebase().then(function(scorecardCollection){

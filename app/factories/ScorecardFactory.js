@@ -143,7 +143,7 @@ app.factory("ScorecardFactory", function($q, $http, firebaseURL, AuthFactory) {
   }
 
   var deleteSingleScorecardFromFirebase = function(selectedCardId){
-    console.log("deletedcardID", selectedCardId);
+    console.log("selectedCardId", selectedCardId);
     return $q(function(resolve, reject){
       $http.delete(firebaseURL + `/scorecards/${selectedCardId}.json`)
         .success(function(changedObjectFromFirebase){
