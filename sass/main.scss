@@ -174,11 +174,18 @@ body{
 //#############################################//
 
 
-//################# WEATHER CARD ##################//
-// .weatherCard {
-//   border: 4px solid black;
+//################# WEATHER ##################//
+#weatherCard {
+  border-radius: 8px;
+
+
   
-// }
+}
+
+#zipCard {
+  margin-top: 100px;
+  border-radius: 8px;
+}
 
 
 

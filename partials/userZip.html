@@ -16,11 +16,13 @@
 
 <div>
   <div class="row">
-    <div class="col s8 m6">
-      <div class="card green">
+    <div class="col s12 m6">
+      <div class="card indigo lighten-1" id="zipCard">
         <div class="card-content white-text">
+          <i class="fa fa-cloud fa-3x"></i>
+          <h4>Weather Check</h4>
           <input type="text" name="zip code" placeholder="Enter Zip Code" value="37206" ng-model="zipCode">
-          <button class="button" ng-click="getWeather(zipCode)">Get Weather</button>
+          <button class="btn btn-info" ng-click="getWeather(zipCode)">Check</button>
         </div>
       </div>
     </div>

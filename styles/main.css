@@ -102,6 +102,13 @@ body {
   color: #fff;
   opacity: 0.5; }
 
+#weatherCard {
+  border-radius: 8px; }
+
+#zipCard {
+  margin-top: 100px;
+  border-radius: 8px; }
+
 .newRoundData {
   text-align: center;
   margin-right: auto;
