@@ -24,10 +24,21 @@ body{
   background-image: url('../img/argyle-pattern-green-white.jpg');
   width:100%;
 }
+
+
+.btn-info{
+  background-color:#137D4D;
+  font-color: white;
+}
 //##################################################//
 
 
 //##################### LOGIN ######################//
+#loginWindow {
+  margin-top: 100px;
+}
+
+
 .card-content{
   text-align:center;
   margin-left: 0px;
@@ -41,19 +52,11 @@ body{
   margin-bottom: 30px;
   font-size: 26px;
   width: 100%;
-  background-color: rgba(205, 195, 103, 1);
-  color: #82c782;
 }
 
-.btn-info p{
-  text-color: #82c782;
 
-}
 
-#registerBtn {
-  color: #82c782;
 
-}
 
 
 //#################################################//
