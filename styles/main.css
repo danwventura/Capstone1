@@ -18,11 +18,14 @@ body {
   background-color: #C5C4A8; }
 
 #navLogout {
-  padding-right: 22%;
-  padding-left: 25%;
+  padding-left: 28%;
+  padding-right: 28%;
   font-size: 16px;
   border-radius: 12px;
   box-shadow: 8px 8px 10px 0px #868587; }
+
+#nav-mobile a {
+  margin-right: 40px; }
 
 #loginWindow {
   margin-top: 100px;
@@ -128,7 +131,8 @@ body {
   width: 70%;
   margin-left: auto;
   margin-right: auto;
-  background-color: #F9FBE7; }
+  background-color: #F9FBE7;
+  box-shadow: 8px 8px 10px 0px #05401c; }
 
 .collapsible-header {
   font-size: 15px; }
@@ -150,7 +154,7 @@ body {
 
 #allCards {
   border-radius: 10px;
-  box-shadow: 10px 10px 23px 0px #7d8a7c;
+  box-shadow: 8px 8px 10px 0px #05401c;
   margin-right: auto;
   margin-left: auto; }
 
