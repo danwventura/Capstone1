@@ -30,12 +30,18 @@ body{
   background-color:#137D4D;
   font-color: white;
 }
+
+.btn-info:active, .btn-info:hover {
+  background-color:#54B541;
+  font-color: black;
+}
 //##################################################//
 
 
 //##################### LOGIN ######################//
 #loginWindow {
   margin-top: 100px;
+  height: 530px;
 }
 
 
@@ -54,6 +60,17 @@ body{
   width: 100%;
 }
 
+.loginBtns{
+  margin-top: 75px;
+}
+
+#loginBtn{
+  width: 75%;
+}
+
+#registerBtn{
+  width: 75%;
+}
 
 
 
