@@ -37,14 +37,14 @@ body {
   padding-right: 5px; }
 
 .mainViewBtns {
-  margin-left: 16%;
+  margin-left: 24%;
   margin-top: 175px; }
 
 .mainViewBtns1 {
   margin-bottom: 30px; }
 
 #weatherBtn {
-  width: 32%;
+  width: 45%;
   height: 95px;
   margin-right: 7%;
   margin-left: -16%;
@@ -56,7 +56,7 @@ body {
   opacity: 0.65; }
 
 #newBtn {
-  width: 32%;
+  width: 45%;
   height: 95px;
   margin-left: 0px;
   border-radius: 10px;
@@ -67,7 +67,7 @@ body {
   opacity: 0.5; }
 
 #bookBtn {
-  width: 32%;
+  width: 45%;
   height: 95px;
   margin-right: 7%;
   margin-left: -16%;
@@ -79,7 +79,7 @@ body {
   opacity: 0.5; }
 
 #statsBtn {
-  width: 32%;
+  width: 45%;
   height: 95px;
   margin-left: 0px;
   border-radius: 10px;
