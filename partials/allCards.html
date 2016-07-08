@@ -6,7 +6,6 @@
       <i class="fa fa-bars"></i>
     </a>
     <ul>
-      <li><a class="btn-floating btn-large red"><i class="fa fa-sign-out"></i></a></li>
       <li><a class="btn-floating btn-large orange"><i class="fa fa-percent"></i></a></li>
       <li><a class="btn-floating btn-large green"><i class="fa fa-book"></i></a></li>
       <li><a class="btn-floating btn-large blue"><i class="fa fa-table"></i></a></li>
@@ -19,16 +18,76 @@
           <div class="col s12 m6">
             <div class="card lime lighten-5" id="allCards">
               <div class="card-content dark-grey-text">
-                <div><i class="fa fa-table fa-2x" aria-hidden="true"></i></div>
-                <h5><a ng-href="#/scorecards/{{scorecard.id}}">{{scorecard.roundCourse}}  ({{scorecard.roundDate}})</a></h5>
-                <div class="allRoundsData">
+                <!-- <h5><a ng-href="#/scorecards/{{scorecard.id}}">{{scorecard.roundCourse}}  ({{scorecard.roundDate}})</a></h5> -->
+                <!-- <div class="allRoundsData">
                   <ul>
                     <li><label><h6>Round Score:</h6></label><h5>{{scorecard.totalScore}}</h5></li>
                     <li><label><h6>Front Score:</h6></label><h5>{{scorecard.frontScore}}</h5></li>
                     <li><label><h6>Back Score:</h6></label><h5>{{scorecard.backScore}}</h5></li>
                     <li><label>Round Handicap:</label><p>{{scorecard.roundHandicap}}</p></li>
                   </ul>
-                </div>
+                </div> -->
+
+                <table class="striped">
+                  <thead>
+                   
+                   <h6 id="cardName"><a ng-href="#/scorecards/{{scorecard.id}}"><i class="fa fa-flag-checkered fa-2x" aria-hidden="true" >   {{scorecard.roundCourse}}   </i></a></h6>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <h6><i class="fa fa-calendar" aria-hidden="true">   Date:</i></h6>
+                      </td>
+                      <td>
+                        <h5>{{scorecard.roundDate}}</h5>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <h6><i class="fa fa-pencil-square-o" aria-hidden="true">   Round Score:</i></h6>
+                      </td>
+                      <td>
+                        <h5>{{scorecard.totalScore}}</h5>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <h6><i class="fa fa-crosshairs" aria-hidden="true">   Total Putts:</i></h6>
+                      </td>
+                      <td>
+                        <h5>{{scorecard.totalPutts}}</h5>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <h6><i class="fa fa-pencil-square-o" aria-hidden="true">   Front Score:</i></h6>
+                      </td>
+                      <td>
+                        <h5>{{scorecard.frontScore}}</h5>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <h6><i class="fa fa-pencil-square-o" aria-hidden="true">   Back Score:</i></h6>
+                      </td>
+                      <td>
+                        <h5>{{scorecard.backScore}}</h5>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <h6><i class="fa fa-plus-circle" aria-hidden="true">   Handicap:</i></h6>
+                      </td>
+                      <td>
+                        <h5>{{scorecard.roundHandicap}}</h5>
+                      </td>
+                    </tr>
+                    
+
+
+
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>

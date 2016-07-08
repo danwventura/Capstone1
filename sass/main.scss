@@ -36,12 +36,28 @@ body{
   font-color: black;
 }
 //##################################################//
+//################### BANNER ######################//
+.nav-wrapper{
+  background-color: #C5C4A8;
+}
 
+#navLogout {
+  padding-right: 22%;
+  padding-left: 25%;
+  font-size: 16px;
+  border-radius:12px;
+  box-shadow: 8px 8px 10px 0px #868587;
+}
+
+
+
+//##################################################//
 
 //##################### LOGIN ######################//
 #loginWindow {
   margin-top: 100px;
   height: 530px;
+  box-shadow: 8px 8px 10px 0px #05401c;
 }
 
 
@@ -79,24 +95,6 @@ body{
 //#################################################//
 
 
-
-//################## NAV #######################//
-.temp li {
-  display: inline;
-
-}
-
-.temp li a{
-  font-size: 20px;
-  text-decoration: none;
-  padding-left: 5px;
-  padding-right: 5px;
-
-}
-
-//#############################################//
-
-
 //################# MAIN VIEW BUTTONS ##################//
 
 
@@ -121,6 +119,7 @@ body{
   margin-left: -16%;
   border-radius: 10px;
   background-color: $mainWeatherBtnColor;
+  box-shadow: 8px 8px 10px 0px #05401c;
 }
 
 #weatherBtn i {
@@ -134,6 +133,7 @@ body{
   margin-left: 0px;
   border-radius: 10px;
   background-color: $mainNewBtnColor;
+  box-shadow: 8px 8px 10px 0px #05401c;
 }
 
 #newBtn i {
@@ -148,6 +148,7 @@ body{
   margin-left: -16%;
   border-radius: 10px;
   background-color: $mainBookBtnColor;
+  box-shadow: 8px 8px 10px 0px #05401c;
 }
 
 #bookBtn i {
@@ -161,6 +162,7 @@ body{
   margin-left: 0px;
   border-radius: 10px;
   background-color: $mainStatBtnColor;
+  box-shadow: 8px 8px 10px 0px #05401c;
 }
 
 #statsBtn i{
@@ -251,6 +253,12 @@ body{
 //   text-align: center;
 //   margin-right: auto;
 //   margin-left: auto;
+// }
+
+
+
+// #cardName{
+//   float:left
 // }
 
 //###############################################//
