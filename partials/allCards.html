@@ -17,16 +17,7 @@
           <div class="col s12 m6">
             <div class="card lime lighten-5" id="allCards">
               <div class="card-content dark-grey-text">
-                <!-- <h5><a ng-href="#/scorecards/{{scorecard.id}}">{{scorecard.roundCourse}}  ({{scorecard.roundDate}})</a></h5> -->
-                <!-- <div class="allRoundsData">
-                  <ul>
-                    <li><label><h6>Round Score:</h6></label><h5>{{scorecard.totalScore}}</h5></li>
-                    <li><label><h6>Front Score:</h6></label><h5>{{scorecard.frontScore}}</h5></li>
-                    <li><label><h6>Back Score:</h6></label><h5>{{scorecard.backScore}}</h5></li>
-                    <li><label>Round Handicap:</label><p>{{scorecard.roundHandicap}}</p></li>
-                  </ul>
-                </div> -->
-
+                
                 <table class="striped">
                   <thead>
                    
@@ -62,7 +53,7 @@
                         <h6><i class="fa fa-pencil-square-o" aria-hidden="true">   Front Score:</i></h6>
                       </td>
                       <td>
-                        <h5>{{scorecard.frontScore}}</h5>
+                        <h5>{{scorecard.frontStrokes}}</h5>
                       </td>
                     </tr>
                     <tr>
@@ -70,7 +61,7 @@
                         <h6><i class="fa fa-pencil-square-o" aria-hidden="true">   Back Score:</i></h6>
                       </td>
                       <td>
-                        <h5>{{scorecard.backScore}}</h5>
+                        <h5>{{scorecard.backStrokes}}</h5>
                       </td>
                     </tr>
                     <tr>

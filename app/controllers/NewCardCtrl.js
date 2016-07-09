@@ -98,22 +98,18 @@ $scope.newCard = {
 
   $scope.createTotals = function(){
     var frontStrokes = angular.element('#newRoundFrontStrokes')[0].attributes.value.value;
-    var frontPutts = angular.element('#newRoundFrontStrokes')[0].attributes.value.value;
-    var frontFairways = angular.element('#newRoundFrontStrokes')[0].attributes.value.value;
-
+    var frontPutts = angular.element('#newRoundFrontPutts')[0].attributes.value.value;
+    var frontFairways = angular.element('#newRoundFrontFairways')[0].attributes.value.value;
     var backStrokes = angular.element('#newRoundBackStrokes')[0].attributes.value.value;
-    var backPutts = angular.element('#newRoundBackStrokes')[0].attributes.value.value;
-    var backFairways = angular.element('#newRoundBackStrokes')[0].attributes.value.value;
-
-
+    var backPutts = angular.element('#newRoundBackPutts')[0].attributes.value.value;
+    var backFairways = angular.element('#newRoundBackFairways')[0].attributes.value.value;
     var totalScore = angular.element('#newRoundTotalScore')[0].attributes.value.value;
-    var totalPutts = angular.element('#newRoundTotalScore')[0].attributes.value.value;
-    var totalScore = angular.element('#newRoundTotalScore')[0].attributes.value.value;
-
+    var totalPutts = angular.element('#newRoundTotalPutts')[0].attributes.value.value;
+    var totalFairways = angular.element('#newRoundTotalFairways')[0].attributes.value.value;
     var roundHandicap = Math.round(((totalScore - 71.4) * 113)/113);
 
 
-    $scope.addNewScorecard(frontStrokes, backStrokes, totalScore, roundHandicap)
+    $scope.addNewScorecard(frontStrokes, frontPutts, frontFairways, backStrokes, backPutts, backFairways, totalScore, totalPutts, totalFairways, roundHandicap)
     }
 
 
@@ -123,11 +119,17 @@ $scope.newCard = {
 
 
    
-  $scope.addNewScorecard = function(frontStrokes, backStrokes, totalScore, roundHandicap){
+  $scope.addNewScorecard = function(frontStrokes, frontPutts, frontFairways, backStrokes, backPutts, backFairways, totalScore, totalPutts, totalFairways, roundHandicap){
       
-      $scope.newCard.frontScore = frontStrokes;
-      $scope.newCard.backScore = backStrokes;
+      $scope.newCard.frontStrokes = frontStrokes;
+      $scope.newCard.frontPutts = frontPutts;
+      $scope.newCard.frontFairways = frontFairways;
+      $scope.newCard.backStrokes = backStrokes;
+      $scope.newCard.backPutts = backPutts;
+      $scope.newCard.backFairways = backFairways;
       $scope.newCard.totalScore = totalScore;
+      $scope.newCard.totalPutts = totalPutts;
+      $scope.newCard.totalFairways = totalFairways;
       $scope.newCard.roundHandicap = roundHandicap;
 
 
