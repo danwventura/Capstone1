@@ -1,15 +1,13 @@
     
 
-    <div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px;">
-        <a class="btn-floating btn-large orange">
+    <div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
+        <a class="btn-floating btn-large red darken-2">
           <i class="fa fa-bars"></i>
         </a>
         <ul>
-          <li><a class="btn-floating btn-large red"><i class="fa fa-sign-out"></i></a></li>
-          <li><a class="btn-floating btn-large orange"><i class="fa fa-percent"></i></a></li>
-          <li><a class="btn-floating btn-large green"><i class="fa fa-book"></i></a></li>
-          <li><a class="btn-floating btn-large blue"><i class="fa fa-table"></i></a></li>
-          <li><a class="btn-floating btn-large yellow darken-1"><i class="fa fa-cloud"></i></a></li>
+          <li><a ng-href="#/scorecards/all" class="btn-floating btn-large purple lighten-3"><i class="fa fa-book"></i></a></li>
+          <li><a ng-href="#/scorecards/new" class="btn-floating btn-large green lighten-2"><i class="fa fa-table"></i></a></li>
+          <li><a ng-href="#/weather/zip" class="btn-floating btn-large indigo lighten-2"><i class="fa fa-cloud"></i></a></li>
         </ul>
     </div>
     
@@ -17,16 +15,16 @@
   <!-- <div id="roundReturned"> -->
     <div class="newRoundData">
       <div class="row">
-        <div class="col s12 m6">
-          <div class="card grey lighten-2">
+        <div class="col s12 s6">
+          <div class="card grey darken-1">
             <div class="card-content white-text">
               <h5>{{selectedCard.roundCourse}}</h5>
               <h5>{{selectedCard.roundDate}}</h5>
           
-              <div><h5>Round Score:  {{selectedCard.roundScore}}</h5></div>      
-              <div><h6>Course Rating:  <strong>{{selectedCard.courseRating}}</strong></h6></div>
-              <div><h6>Course Slope:  <strong>{{selectedCard.courseSlope}}</strong></h6></div>
-              <div><h6>Round Date:  <strong>{{selectedCard.roundDate}}</strong></h6></div>
+              <div><h5>Round Score:  <strong>{{selectedCard.totalScore}}</strong></h5></div>      
+              <div><h6>Front Score:  <strong>{{selectedCard.frontScore}}</strong></h6></div>
+              <div><h6>Back Score:  <strong>{{selectedCard.backScore}}</strong></h6></div>
+              <div><h6>Round Handicap:  <strong>{{selectedCard.roundHandicap}}</strong></h6></div>
             </div>
           </div>
         </div>
@@ -35,7 +33,7 @@
 
      
         <div class="row">
-          <div class="col s11 s6 offset-s1">
+          <div class="col s12 s6">
             <div class="card lime lighten-5" id="allCards">
               <div class="card-content dark-grey-text">
                 <table class="striped">
@@ -122,9 +120,9 @@
                     
                     <tr>
                       <td>Front:</td>
-                      <td>{{selectedCard.frontNinePutts}}</td>
-                      <td>{{selectedCard.frontNineFairways}}</td>
-                      <td>{{selectedCard.frontNineScore}}</td>
+                      <td>{{selectedCard.frontStrokes}}</td>
+                      <td>{{selectedCard.frontFairways}}</td>
+                      <td>{{selectedCard.frontPutts}}</td>
                     </tr>
                    
 
@@ -137,7 +135,7 @@
         </div>
       </div>
                <div class="row">
-                <div class="col s11 s6 offset-s1">
+                <div class="col s12 s6">
                   <div class="card lime lighten-5" id="allCards">
                     <div class="card-content dark-grey-text">
                       <table class="striped">
@@ -223,9 +221,9 @@
                             
                             <tr>
                               <td>Back:</td>
-                              <td>{{selectedCard.backNinePutts}}</td>
-                              <td>{{selectedCard.backNineFairways}}</td>
-                              <td>{{selectedCard.backNineScore}}</td>
+                              <td>{{selectedCard.backStrokes}}</td>
+                              <td>{{selectedCard.backFairways}}</td>
+                              <td>{{selectedCard.backPutts}}</td>
                             </tr>
                     
                             <tr>
@@ -237,17 +235,15 @@
                             
                             <tr>
                               <td>Totals:</td>
-                              <td>{{selectedCard.totalPutts}}</td>
-                              <td>{{selectedCard.totalFairways}}</td>
                               <td>{{selectedCard.totalScore}}</td>
+                              <td>{{selectedCard.totalFairways}}</td>
+                              <td>{{selectedCard.totalPutts}}</td>
                             </tr>
                           </tbody>
                         </table>
-                        <div id="cardViewEditBtn" class="button">
-                          <button><a ng-href="#/scorecards/{{selectedCardId}}/edit">Edit</a></button>
-                        </div>
-                        <div id="cardViewDeleteBtn" class="button">
-                          <button ng-click="deleteSingleScorecard()">Delete Round</button>
+                        <div id="cardViewBtns" >
+                          <a ng-href="#/scorecards/{{selectedCardId}}/edit" class="btn btn-info">Edit</a>
+                          <button class="btn btn-info" ng-click="deleteSingleScorecard()">Delete</button>
                        </div>
                       </div>
                     </div>
